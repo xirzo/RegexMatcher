@@ -1,4 +1,4 @@
-add_library(parser STATIC ./src/parser.cpp ./src/lexer.cpp ./src/ast.cpp)
+add_library(parser STATIC ./src/parser.cpp ./src/lexer.cpp ./src/ast.cpp ./src/matcher.cpp)
 
 target_include_directories(parser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)
 

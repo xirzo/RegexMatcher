@@ -20,7 +20,6 @@ This program is designed to match strings against regular expressions, offering 
    cd regex
    ```
 2. **Build the project**:
-   - Run:
      ```bash
      mkdir build
      cd build
