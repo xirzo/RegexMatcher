@@ -1,39 +1,18 @@
-# 🚀 Regex Matcher
+This program was written to easily check answers for my *Discrete math* homework.
 
-This program is designed to match strings against regular expressions, offering a way to validate your calculations.
+## Build
 
----
+```sh
+git clone https://github.com/xirzo/regexmatcher.git
+cd regexmatcher
+cmake -B build/
+cmake --build build/ 
+./build/bin/regex
+```
 
-## 🛠️ Features
+Now you may just edit the `bin/main.cpp` with your *regex* and recompile it.
 
-- ✅ **Custom Regex Parser**: Parses and evaluates regex patterns with precision.  
-- 🔍 **Matching Capability**: Matches strings against regex patterns.  
-- 📋 **Examples Included**: A set of test cases is provided to demonstrate how it works.  
-
----
-
-## 📝 Usage
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/xirzo/regex.git
-   cd regex
-   ```
-2. **Build the project**:
-     ```bash
-     mkdir build
-     cd build
-     cmake ..
-     make
-     ```
-3. **Run the program**:
-   ```bash
-   ./regex_matcher
-   ```
-
----
-
-## 🧪 Example
+## Example
 
 Here’s a sample regex used in the program:
 
@@ -45,11 +24,11 @@ Here’s a sample regex used in the program:
 
 | **Regex**                                  | **Input**         | **Result**   |
 |-------------------------------------------|-------------------|--------------|
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaaaaaa`    | ✅ Match      |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaa...aaa`  | ✅ Match      |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@a.a.a.a`    | ✅ Match      |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.a.a.a`     | ✅ Match      |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.....a`     | ✅ Match      |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.....`      | ❌ No Match   |
-| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaaa....`   | ❌ No Match   |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaaaaaa`    | Match      |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaa...aaa`  | Match      |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@a.a.a.a`    | Match      |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.a.a.a`     | Match      |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.....a`     | Match      |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@.....`      | No Match   |
+| `(a\|.\|-)(a\|.\|-)*@((a*.*a)\|a)((a*.*a)\|a)*` | `aaaa@aaaa....`   | No Match   |
 
